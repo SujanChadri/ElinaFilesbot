@@ -398,13 +398,13 @@ async def start(client, message):
         current_time = datetime.now(pytz.timezone(TIMEZONE))
         curr_time = current_time.hour        
         if curr_time < 12:
-            gtxt = "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ 👋" 
+            gtxt = "Gᴏᴏᴅ Mᴏʀɴɪɴɢ 👋" 
         elif curr_time < 17:
-            gtxt = "ɢᴏᴏᴅ ᴀғᴛᴇʀɴᴏᴏɴ 👋" 
+            gtxt = "Gᴏᴏᴅ Aғᴛᴇʀɴᴏᴏɴ 👋" 
         elif curr_time < 21:
-            gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 👋"
+            gtxt = "Gᴏᴏᴅ Eᴠᴇɴɪɴɢ 👋"
         else:
-            gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 👋"        
+            gtxt = "Gᴏᴏᴅ Nɪɢʜᴛ 👋"        
         user_id = message.from_user.id
         if await db.has_premium_access(message.from_user.id):
             pass
@@ -458,7 +458,7 @@ async def start(client, message):
                        InlineKeyboardButton("ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ", url=HOW_TO_VERIFY)
                    ]]
                     l = await message.reply_text(
-                        text=f"<blockquote><b>ʜᴇʏ ʙʀᴏ,\n\n ‼️ ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ ᴛᴏᴅᴀʏ ‼️\n\n ›› ᴘʟᴇᴀsᴇ ᴠᴇʀɪғʏ ᴀɴᴅ ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss ғᴏʀ {VERIFY_EXPIRE} ʜᴏᴜʀs ✅</blockquote></b>",
+                        text=f"<blockquote><b>Hᴇʏ Bʀᴏ,\n\n ‼️ Yᴏᴜ'ʀᴇ Nᴏᴛ Vᴇʀɪғɪᴇᴅ Tᴏᴅᴀʏ ‼️\n\n ›› Pʟᴇᴀsᴇ Vᴇʀɪғʏ Aɴᴅ Gᴇᴛ Uɴʟɪᴍɪᴛᴇᴅ Aᴄᴄᴇss Fᴏʀ {VERIFY_EXPIRE} Hᴏᴜʀs ✅</blockquote></b>",
                         protect_content=False,
                         reply_markup=InlineKeyboardMarkup(btn)
                     )
@@ -493,13 +493,13 @@ async def start(client, message):
         current_time = datetime.now(pytz.timezone(TIMEZONE))
         curr_time = current_time.hour        
         if curr_time < 12:
-            gtxt = "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ  👋" 
+            gtxt = "Gᴏᴏᴅ Mᴏʀɴɪɴɢ  👋" 
         elif curr_time < 17:
-            gtxt = "ɢᴏᴏᴅ ᴀғᴛᴇʀɴᴏᴏɴ  👋" 
+            gtxt = "Gᴏᴏᴅ Aғᴛᴇʀɴᴏᴏɴ  👋" 
         elif curr_time < 21:
-            gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ  👋"
+            gtxt = "Gᴏᴏᴅ Eᴠᴇɴɪɴɢ  👋"
         else:
-            gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ  👋"     
+            gtxt = "Gᴏᴏᴅ Nɪɢʜᴛ  👋"     
         user_id = message.from_user.id
         if temp.SHORT.get(user_id)==None:
             return await message.reply_text(text="<b>Please Search Again in Group</b>")
@@ -513,9 +513,9 @@ async def start(client, message):
             k = await client.send_message(chat_id=message.from_user.id,text=f"🫂 Hᴇʏ {message.from_user.mention}, {gtxt}\n\n✅ ʏᴏᴜʀ ʟɪɴᴋ ɪꜱ ʀᴇᴀᴅʏ, ᴋɪɴᴅʟʏ ᴄʟɪᴄᴋ ᴏɴ ᴅᴏᴡɴʟᴏᴀᴅ ʙᴜᴛᴛᴏɴ.\n\n⚠️ ꜰɪʟᴇ ɴᴀᴍᴇ : <code>{files.file_name}</code> \n\n📥 ꜰɪʟᴇ ꜱɪᴢᴇ : <code>{get_size(files.file_size)}</code>\n\n", reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton('📁 ᴅᴏᴡɴʟᴏᴀᴅ 📁', url=g)
+                            InlineKeyboardButton('📁 Dᴏᴡɴʟᴏᴀᴅ 📁', url=g)
                         ], [
-                            InlineKeyboardButton('⚡ ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ⚡', url=await get_tutorial(chat_id))
+                            InlineKeyboardButton('⚡ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ⚡', url=await get_tutorial(chat_id))
                         ]
                     ]
                 )
@@ -610,12 +610,12 @@ async def start(client, message):
     else:
         if not await check_verification(client, message.from_user.id) and VERIFY == True:
             btn = [[
-              InlineKeyboardButton("ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴠᴇʀɪғʏ", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
+              InlineKeyboardButton("Cʟɪᴄᴋ Hᴇʀᴇ Tᴏ Vᴇʀɪғʏ", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
            ],[
-              InlineKeyboardButton("ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ", url=HOW_TO_VERIFY)
+              InlineKeyboardButton("Hᴏᴡ Tᴏ Vᴇʀɪғʏ", url=HOW_TO_VERIFY)
            ]]
             l = await message.reply_text(
-                text=f"<blockquote><b>ʜᴇʏ ʙʀᴏ,\n\n ‼️ ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ ᴛᴏᴅᴀʏ ‼️\n\n ›› ᴘʟᴇᴀsᴇ ᴠᴇʀɪғʏ ᴀɴᴅ ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss ғᴏʀ {VERIFY_EXPIRE} ʜᴏᴜʀs ✅\n\n ›› ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴅɪʀᴇᴄᴛ ғɪʟᴇs ᴛʜᴇɴ ʏᴏᴜ ᴄᴀɴ ᴛᴀᴋᴇ ᴘʀᴇᴍɪᴜᴍ sᴇʀᴠɪᴄᴇs.</blockquote></b>",
+                text=f"<blockquote><b>Hᴇʏ Bʀᴏ,\n\n ‼️ Yᴏᴜ'ʀᴇ Nᴏᴛ Vᴇʀɪғɪᴇᴅ Tᴏᴅᴀʏ ‼️\n\n ›› Pʟᴇᴀsᴇ Vᴇʀɪғʏ Aɴᴅ Gᴇᴛ Uɴʟɪᴍɪᴛᴇᴅ Aᴄᴄᴇss Fᴏʀ {VERIFY_EXPIRE} Hᴏᴜʀs ✅\n\n ›› Iғ Yᴏᴜ Wᴀɴᴛ Dɪʀᴇᴄᴛ Fɪʟᴇs Tʜᴇɴ Yᴏᴜ Cᴀɴ Tᴀᴋᴇ Pʀᴇᴍɪᴜᴍ Sᴇʀᴠɪᴄᴇs.</blockquote></b>",
                 protect_content=False,
                 reply_markup=InlineKeyboardMarkup(btn)
             )
@@ -639,7 +639,7 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(btn)
     )
     btn = [[
-            InlineKeyboardButton("❗ ɢᴇᴛ ꜰɪʟᴇ ᴀɢᴀɪɴ ❗", callback_data=f'delfile#{file_id}')
+            InlineKeyboardButton("❗ Gᴇᴛ Fɪʟᴇ Aɢᴀɪɴ ❗", callback_data=f'delfile#{file_id}')
         ]]
     k = await msg.reply(
         f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\n"
