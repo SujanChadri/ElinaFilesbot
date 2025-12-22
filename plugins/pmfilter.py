@@ -1753,7 +1753,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "donation":
         buttons = [[
-            InlineKeyboardButton('sᴇɴᴅ ss ʜᴇʀᴇ', url=OWNER_LNK)
+            InlineKeyboardButton('Sᴇɴᴅ Sᴄʀᴇᴇɴꜱʜᴏᴛ Hᴇʀᴇ', url=OWNER_LNK)
         ],[
             InlineKeyboardButton('⇍ ʙᴀᴄᴋ ⇏', callback_data='start')
         ]]
@@ -1918,7 +1918,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://graph.org/file/670f6df9f755dc2c9a00a.jpg")
+            InputMediaPhoto("https://graph.org/file/1c235400abee9407456b8-7fe9241ad31fb0d4e5.jpg")
         )
         await query.message.edit_text(
             text=script.BRONZE_TXT.format(query.from_user.mention),
@@ -1940,7 +1940,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://graph.org/file/670f6df9f755dc2c9a00a.jpg")
+            InputMediaPhoto("https://graph.org/file/1c235400abee9407456b8-7fe9241ad31fb0d4e5.jpg")
         )
         await query.message.edit_text(
             text=script.SILVER_TXT.format(query.from_user.mention),
@@ -1962,7 +1962,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://graph.org/file/670f6df9f755dc2c9a00a.jpg")
+            InputMediaPhoto("https://graph.org/file/1c235400abee9407456b8-7fe9241ad31fb0d4e5.jpg")
         )
         await query.message.edit_text(
             text=script.GOLD_TXT.format(query.from_user.mention),
@@ -1984,7 +1984,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://graph.org/file/670f6df9f755dc2c9a00a.jpg")
+            InputMediaPhoto("https://graph.org/file/1c235400abee9407456b8-7fe9241ad31fb0d4e5.jpg")
         )
         await query.message.edit_text(
             text=script.PLATINUM_TXT.format(query.from_user.mention),
@@ -2023,7 +2023,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://graph.org/file/670f6df9f755dc2c9a00a.jpg")
+            InputMediaPhoto("https://graph.org/file/1c235400abee9407456b8-7fe9241ad31fb0d4e5.jpg")
         )
         await query.message.edit_text(
             text=script.OTHER_TXT.format(query.from_user.mention),
@@ -2033,17 +2033,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "group_info":
         buttons = [[
-            InlineKeyboardButton('× ᴀʟʟ ᴏᴜʀ ʟɪɴᴋꜱ ×', url="https://t.me/nova_flix")
+            InlineKeyboardButton('× Cʜᴀɴɴᴇʟ & Gʀᴏᴜᴘ ×', url="https://t.me/Sujan_Ch")
        ],[
-            InlineKeyboardButton('• ɢʀᴏᴜᴘ •', url="t.me/movie7xchat"),
-            InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇs •', url="t.me/codeflix_bots")
+            InlineKeyboardButton('• Mᴏᴠɪᴇ RᴇQᴜᴇꜱᴛ Gʀᴏᴜᴘ ~ 1 •', url="https://t.me/+7UoIuWSlL0MxNWE1"),
+            InlineKeyboardButton('• Mᴏᴠɪᴇ RᴇQᴜᴇꜱᴛ Gʀᴏᴜᴘ ~ 2 •', url="https://t.me/+CJuPXZwP_NtlZTI1")
        ],[
-            InlineKeyboardButton('• sᴇʀɪᴇsғʟɪx •', url="https://t.me/webseries_flix"),
-            InlineKeyboardButton('• ᴍᴏᴠɪᴇғʟɪx •', url="https://t.me/movieflixspot")
-       ],[
-            InlineKeyboardButton('• ᴀɴɪᴍᴇ ᴄʀᴜɪsᴇ •', url="https://t.me/Anime_Cruise_Netflix")
-       ],[ 
-            InlineKeyboardButton('• ʙᴀᴄᴋ •', callback_data='start')
+            InlineKeyboardButton('• Bᴀᴄᴋ •', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -2053,7 +2048,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "users":
         buttons = [[
-            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='help')
+            InlineKeyboardButton('⇋ Bᴀᴄᴋ ⇋', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -2064,7 +2059,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "group":
         buttons = [[
-            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='help')
+            InlineKeyboardButton('⇋ Bᴀᴄᴋ ⇋', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -2079,7 +2074,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             return await query.answer("⚠️ ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴀ ʙᴏᴛ ᴀᴅᴍɪɴ !", show_alert=True)
         page = 0  
         buttons = [
-            [InlineKeyboardButton('ɴᴇxᴛ ➡️', callback_data=f'admic_next_{page}')],
+            [InlineKeyboardButton('Nᴇxᴛ ➡️', callback_data=f'admic_next_{page}')],
             [InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='help')]
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -2155,13 +2150,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "help1":
         buttons = [[
-            InlineKeyboardButton('ᴇxᴛʀᴀ', callback_data='extra'),
-            InlineKeyboardButton('ᴛᴇʟᴇɢʀᴀᴘʜ', callback_data='tele')
+            InlineKeyboardButton('Exᴛʀᴀ', callback_data='extra'),
+            InlineKeyboardButton('Tᴇʟᴇɢʀᴀᴘʜ', callback_data='tele')
         ], [
-            InlineKeyboardButton('ɢɪᴛʜᴜʙ', callback_data='git')
+            InlineKeyboardButton('Gɪᴛʜᴜʙ', callback_data='git')
         ], [
             InlineKeyboardButton('◁', callback_data='help'),
-            InlineKeyboardButton('• ʜᴏᴍᴇ •', callback_data='start'),
+            InlineKeyboardButton('• Hᴏᴍᴇ •', callback_data='start'),
             InlineKeyboardButton('▷', callback_data='help2')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -2173,15 +2168,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('‼️ ᴅɪꜱᴄʟᴀɪᴍᴇʀ ‼️', callback_data='disclaimer'),
+            InlineKeyboardButton('‼️ Dɪꜱᴄʟᴀɪᴍᴇʀ ‼️', callback_data='disclaimer'),
         ], [
-            InlineKeyboardButton('• sᴜᴘᴘᴏʀᴛ', callback_data='group_info'),
-            InlineKeyboardButton('ᴄᴏᴍᴍᴀɴᴅs •', callback_data='main')
+            InlineKeyboardButton('• Sᴜᴘᴘᴏʀᴛ', callback_data='group_info'),
+            InlineKeyboardButton('• Cᴏᴍᴍᴀɴᴅs •', callback_data='main')
         ], [
-            InlineKeyboardButton('• ᴅᴇᴠᴇʟᴏᴘᴇʀ', user_id=int(6497757690)),
-            InlineKeyboardButton('ɴᴇᴛᴡᴏʀᴋ •', url="t.me/otakuflix_network")
+            InlineKeyboardButton('• Cʜᴀɴɴᴇʟ •', url="t.me/Sujan_BotZ")
         ], [
-            InlineKeyboardButton('• ʙᴀᴄᴋ •', callback_data='start')
+            InlineKeyboardButton('• Bᴀᴄᴋ •', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
