@@ -16,49 +16,49 @@ async def vrfs(client, message):
     last_year = await vr_db.get_vr_count("year", year=datetime.now().year - 1)
 
     btn = [[
-        InlineKeyboardButton("ᴛᴏᴅᴀʏ", callback_data=f'vrrfrs#tud'), 
+        InlineKeyboardButton("Tᴏᴅᴀʏ", callback_data=f'vrrfrs#tud'), 
         InlineKeyboardButton(f"{today}", callback_data=f'vrrfrs#tud')
         ],[
-        InlineKeyboardButton("ʏᴇsᴛᴇʀᴅᴀʏ", callback_data=f'vrrfrs#yes'), 
+        InlineKeyboardButton("Yᴇsᴛᴇʀᴅᴀʏ", callback_data=f'vrrfrs#yes'), 
         InlineKeyboardButton(f"{yesterday}", callback_data=f'vrrfrs#yes')
         ],[
-        InlineKeyboardButton("ᴛʜɪs ᴡᴇᴇᴋ", callback_data=f'vrrfrs#week'), 
+        InlineKeyboardButton("Tʜɪs Wᴇᴇᴋ", callback_data=f'vrrfrs#week'), 
         InlineKeyboardButton(f"{this_week}", callback_data=f'vrrfrs#week')     
         ],[
-        InlineKeyboardButton("ᴛʜɪs ᴍᴏɴᴛʜ", callback_data=f'vrrfrs#mont'), 
+        InlineKeyboardButton("Tʜɪs Mᴏɴᴛʜ", callback_data=f'vrrfrs#mont'), 
         InlineKeyboardButton(f"{this_month}", callback_data=f'vrrfrs#mont')
         ],[
-        InlineKeyboardButton("ʟᴀsᴛ ᴍᴏɴᴛʜ", callback_data=f'vrrfrs#lmont'), 
+        InlineKeyboardButton("Lᴀsᴛ Mᴏɴᴛʜ", callback_data=f'vrrfrs#lmont'), 
         InlineKeyboardButton(f"{last_month}", callback_data=f'vrrfrs#lmont')        
         ],[
-        InlineKeyboardButton("ᴛʜɪs ʏᴇᴀʀ", callback_data=f'vrrfrs#tyear'), 
+        InlineKeyboardButton("Tʜɪs Yᴇᴀʀ", callback_data=f'vrrfrs#tyear'), 
         InlineKeyboardButton(f"{this_year}", callback_data=f'vrrfrs#tyear')
         ],[
-        InlineKeyboardButton("ʟᴀsᴛ ʏᴇᴀʀ", callback_data=f'vrrfrs#lyear'), 
+        InlineKeyboardButton("Lᴀsᴛ Yᴇᴀʀ", callback_data=f'vrrfrs#lyear'), 
         InlineKeyboardButton(f"{last_year}", callback_data=f'vrrfrs#lyear')
         ],[
-        InlineKeyboardButton("🔄 ʀᴇғʀᴇsʜ", callback_data=f'vrrfrs#vrrfrs'), 
+        InlineKeyboardButton("🔄 Rᴇғʀᴇsʜ", callback_data=f'vrrfrs#vrrfrs'), 
     ]]
-    await message.reply_text("✅ **#verification**\n\nTᴏᴛᴀʟ ᴠᴇʀɪғɪᴇᴅ ᴜsᴇʀs", reply_markup=InlineKeyboardMarkup(btn))
+    await message.reply_text("✅ **#verification**\n\nTᴏᴛᴀʟ Vᴇʀɪғɪᴇᴅ Usᴇʀs", reply_markup=InlineKeyboardMarkup(btn))
 
 @Client.on_callback_query(filters.regex(r"^vrrfrs"))
 async def vr_ref(client, query): 
     ident, set_type = query.data.split("#")
 
     if set_type == "tud":
-        return await query.answer('verified users from today', show_alert=True)
+        return await query.answer('Verified Users From Today', show_alert=True)
     elif set_type == "yes":
-        return await query.answer('verified users from yesterday', show_alert=True)
+        return await query.answer('Verified Users From Yesterday', show_alert=True)
     elif set_type == "week":
-        return await query.answer('verified users from this week', show_alert=True)
+        return await query.answer('Verified Users From This Week', show_alert=True)
     elif set_type == "mont":
-        return await query.answer('verified users from this month', show_alert=True)
+        return await query.answer('Verified Users From This Month', show_alert=True)
     elif set_type == "lmont":
-        return await query.answer('verified users from last month', show_alert=True)
+        return await query.answer('Verified Users From Last Month', show_alert=True)
     elif set_type == "tyear":
-        return await query.answer('verified users from this year', show_alert=True)
+        return await query.answer('Verified Users From This Year', show_alert=True)
     elif set_type == "lyear":
-        return await query.answer('verified users from last year', show_alert=True)
+        return await query.answer('Verified Users From Last Year', show_alert=True)
     else:#set_type == "vrrfrs":   
         pass 
         
@@ -72,33 +72,33 @@ async def vr_ref(client, query):
     last_year = await vr_db.get_vr_count("year", year=datetime.now().year - 1)
     
     btn = [[
-        InlineKeyboardButton("ᴛᴏᴅᴀʏ", callback_data=f'vrrfrs#tud'), 
+        InlineKeyboardButton("Tᴏᴅᴀʏ", callback_data=f'vrrfrs#tud'), 
         InlineKeyboardButton(f"{today}", callback_data=f'vrrfrs#tud')
         ],[
-        InlineKeyboardButton("ʏᴇsᴛᴇʀᴅᴀʏ", callback_data=f'vrrfrs#yes'), 
+        InlineKeyboardButton("Yᴇsᴛᴇʀᴅᴀʏ", callback_data=f'vrrfrs#yes'), 
         InlineKeyboardButton(f"{yesterday}", callback_data=f'vrrfrs#yes')
         ],[
-        InlineKeyboardButton(" ᴛʜɪs ᴡᴇᴇᴋ", callback_data=f'vrrfrs#week'), 
+        InlineKeyboardButton("Tʜɪs Wᴇᴇᴋ", callback_data=f'vrrfrs#week'), 
         InlineKeyboardButton(f"{this_week}", callback_data=f'vrrfrs#week')     
         ],[
-        InlineKeyboardButton("ᴛʜɪs ᴍᴏɴᴛʜ", callback_data=f'vrrfrs#mont'), 
+        InlineKeyboardButton("Tʜɪs Mᴏɴᴛʜ", callback_data=f'vrrfrs#mont'), 
         InlineKeyboardButton(f"{this_month}", callback_data=f'vrrfrs#mont')
         ],[
-        InlineKeyboardButton(" ʟᴀsᴛ ᴍᴏɴᴛʜ", callback_data=f'vrrfrs#lmont'), 
+        InlineKeyboardButton("Lᴀsᴛ Mᴏɴᴛʜ", callback_data=f'vrrfrs#lmont'), 
         InlineKeyboardButton(f"{last_month}", callback_data=f'vrrfrs#lmont')        
         ],[
-        InlineKeyboardButton("ᴛʜɪs ʏᴇᴀʀ", callback_data=f'vrrfrs#tyear'), 
+        InlineKeyboardButton("Tʜɪs Yᴇᴀʀ", callback_data=f'vrrfrs#tyear'), 
         InlineKeyboardButton(f"{this_year}", callback_data=f'vrrfrs#tyear')
         ],[
-        InlineKeyboardButton(" ʟᴀsᴛ ʏᴇᴀʀ", callback_data=f'vrrfrs#lyear'), 
+        InlineKeyboardButton("Lᴀsᴛ Yᴇᴀʀ", callback_data=f'vrrfrs#lyear'), 
         InlineKeyboardButton(f"{last_year}", callback_data=f'vrrfrs#lyear')
         ],[
-        InlineKeyboardButton("🔄 ʀᴇғʀᴇsʜ", callback_data=f'vrrfrs#vrrfrs'), 
+        InlineKeyboardButton("🔄 Rᴇғʀᴇsʜ", callback_data=f'vrrfrs#vrrfrs'), 
     ]] 
     try: 
-        await query.message.edit("✅ **#verification**\n\nTᴏᴛᴀʟ ᴠᴇʀɪғɪᴇᴅ ᴜsᴇʀs", reply_markup=InlineKeyboardMarkup(btn))
+        await query.message.edit("✅ **#verification**\n\nTᴏᴛᴀʟ Vᴇʀɪғɪᴇᴅ Usᴇʀs", reply_markup=InlineKeyboardMarkup(btn))
     except MessageNotModified:
         pass
-    await query.answer("Rᴇғʀᴇsʜɪɴɢ_ᴅᴀᴛᴀ ✅......")
+    await query.answer("Rᴇғʀᴇsʜɪɴɢ_Dᴀᴛᴀ ✅......")
 
   
