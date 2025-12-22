@@ -1,4 +1,3 @@
-
 from datetime import timedelta
 import pytz
 import datetime, time
@@ -46,11 +45,11 @@ async def myplan(client, message):
         minutes, seconds = divmod(remainder, 60)
             
         # Format time left as a string
-        time_left_str = f"{days} ᴅᴀʏꜱ, {hours} ʜᴏᴜʀꜱ, {minutes} ᴍɪɴᴜᴛᴇꜱ"
-        await message.reply_text(f"⚜️ ᴘʀᴇᴍɪᴜᴍ ᴜꜱᴇʀ ᴅᴀᴛᴀ :\n\n👤 ᴜꜱᴇʀ : {user}\n⚡ ᴜꜱᴇʀ ɪᴅ : <code>{user_id}</code>\n⏰ ᴛɪᴍᴇ ʟᴇꜰᴛ : {time_left_str}\n⌛️ ᴇxᴘɪʀʏ ᴅᴀᴛᴇ : {expiry_str_in_ist}")   
+        time_left_str = f"{days} Dᴀʏꜱ, {hours} Hᴏᴜʀꜱ, {minutes} Mɪɴᴜᴛᴇꜱ"
+        await message.reply_text(f"⚜️ Pʀᴇᴍɪᴜᴍ Uꜱᴇʀ Dᴀᴛᴀ :\n\n👤 Uꜱᴇʀ : {user}\n⚡ Uꜱᴇʀ Iᴅ : <code>{user_id}</code>\n⏰ Tɪᴍᴇ Lᴇꜰᴛ : {time_left_str}\n⌛️ Exᴘɪʀʏ Dᴀᴛᴇ : {expiry_str_in_ist}")   
     else:
-        await message.reply_text(f"<b>ʜᴇʏ {user},\n\n<blockquote>𝒀𝒐𝒖 𝑫𝒐 𝑵𝒐𝒕 𝑯𝒂𝒗𝒆 𝑨𝒏𝒚 𝑨𝒄𝒕𝒊𝒗𝒆 𝑷𝒓𝒆𝒎𝒊𝒖𝒎 𝒑𝒍𝒂𝒏𝒔, 𝑰𝒇 𝒀𝒐𝒖 𝑾𝒂𝒏𝒕 𝑻𝒐 𝑻𝒂𝒌𝒆 𝑷𝒓𝒆𝒎𝒊𝒖𝒎 𝑻𝒉𝒆𝒏 𝑪𝒍𝒊𝒄𝒌 𝑶𝒏 𝑩𝒆𝒍𝒐𝒘 𝑩𝒖𝒕𝒕𝒐𝒏 👇</blockquote><b>",
-	reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🌳 ᴄʜᴇᴄᴋᴏᴜᴛ ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴꜱ 🌳", callback_data='seeplans')]]))			 
+        await message.reply_text(f"<b>Hᴇʏ {user},\n\n<blockquote>𝒀𝒐𝒖 𝑫𝒐 𝑵𝒐𝒕 𝑯𝒂𝒗𝒆 𝑨𝒏𝒚 𝑨𝒄𝒕𝒊𝒗𝒆 𝑷𝒓𝒆𝒎𝒊𝒖𝒎 𝒑𝒍𝒂𝒏𝒔, 𝑰𝒇 𝒀𝒐𝒖 𝑾𝒂𝒏𝒕 𝑻𝒐 𝑻𝒂𝒌𝒆 𝑷𝒓𝒆𝒎𝒊𝒖𝒎 𝑻𝒉𝒆𝒏 𝑪𝒍𝒊𝒄𝒌 𝑶𝒏 𝑩𝒆𝒍𝒐𝒘 𝑩𝒖𝒕𝒕𝒐𝒏 👇</blockquote><b>",
+	reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🌳 Cʜᴇᴄᴋᴏᴜᴛ Pʀᴇᴍɪᴜᴍ Pʟᴀɴꜱ 🌳", callback_data='seeplans')]]))			 
 
 @Client.on_message(filters.command("get_premium") & filters.user(ADMINS))
 async def get_premium(client, message):
@@ -73,10 +72,10 @@ async def get_premium(client, message):
             minutes, seconds = divmod(remainder, 60)
             
             # Format time left as a string
-            time_left_str = f"{days} days, {hours} hours, {minutes} minutes"
-            await message.reply_text(f"⚜️ ᴘʀᴇᴍɪᴜᴍ ᴜꜱᴇʀ ᴅᴀᴛᴀ :\n\n👤 ᴜꜱᴇʀ : {user.mention}\n⚡ ᴜꜱᴇʀ ɪᴅ : <code>{user_id}</code>\n⏰ ᴛɪᴍᴇ ʟᴇꜰᴛ : {time_left_str}\n⌛️ ᴇxᴘɪʀʏ ᴅᴀᴛᴇ : {expiry_str_in_ist}")
+            time_left_str = f"{days} Dᴀʏꜱ, {hours} Hᴏᴜʀꜱ, {minutes} Mɪɴᴜᴛᴇꜱ"
+        await message.reply_text(f"⚜️ Pʀᴇᴍɪᴜᴍ Uꜱᴇʀ Dᴀᴛᴀ :\n\n👤 Uꜱᴇʀ : {user}\n⚡ Uꜱᴇʀ Iᴅ : <code>{user_id}</code>\n⏰ Tɪᴍᴇ Lᴇꜰᴛ : {time_left_str}\n⌛️ Exᴘɪʀʏ Dᴀᴛᴇ : {expiry_str_in_ist}")
         else:
-            await message.reply_text("ɴᴏ ᴀɴʏ ᴘʀᴇᴍɪᴜᴍ ᴅᴀᴛᴀ ᴏꜰ ᴛʜᴇ ᴡᴀꜱ ꜰᴏᴜɴᴅ ɪɴ ᴅᴀᴛᴀʙᴀꜱᴇ !")
+            await message.reply_text("Nᴏ Aɴʏ Pʀᴇᴍɪᴜᴍ Dᴀᴛᴀ Fᴏᴜɴᴅ Iɴ Dᴀᴛᴀʙᴀꜱᴇ !")
     else:
         await message.reply_text("ᴜꜱᴀɢᴇ : /get_premium user_id")
 
@@ -95,13 +94,13 @@ async def give_premium_cmd_handler(client, message):
             await db.update_user(user_data) 
             data = await db.get_user(user_id)
             expiry = data.get("expiry_time")   
-            expiry_str_in_ist = expiry.astimezone(pytz.timezone("Asia/Kolkata")).strftime("%d-%m-%Y\n⏱️ ᴇxᴘɪʀʏ ᴛɪᴍᴇ : %I:%M:%S %p")         
-            await message.reply_text(f"ᴘʀᴇᴍɪᴜᴍ ᴀᴅᴅᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ✅\n\n👤 ᴜꜱᴇʀ : {user.mention}\n⚡ ᴜꜱᴇʀ ɪᴅ : <code>{user_id}</code>\n⏰ ᴘʀᴇᴍɪᴜᴍ ᴀᴄᴄᴇꜱꜱ : <code>{time}</code>\n\n⏳ ᴊᴏɪɴɪɴɢ ᴅᴀᴛᴇ : {current_time}\n\n⌛️ ᴇxᴘɪʀʏ ᴅᴀᴛᴇ : {expiry_str_in_ist}", disable_web_page_preview=True)
+            expiry_str_in_ist = expiry.astimezone(pytz.timezone("Asia/Kolkata")).strftime("%d-%m-%Y\n⏱️ Exᴘɪʀʏ Tɪᴍᴇ : %I:%M:%S %p")         
+            await message.reply_text(f"Pʀᴇᴍɪᴜᴍ Aᴅᴅᴇᴅ Sᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ✅\n\n👤 Uꜱᴇʀ : {user.mention}\n⚡ Uꜱᴇʀ Iᴅ : <code>{user_id}</code>\n⏰ Pʀᴇᴍɪᴜᴍ Aᴄᴄᴇꜱꜱ : <code>{time}</code>\n\n⏳ Jᴏɪɴɪɴɢ Dᴀᴛᴇ : {current_time}\n\n⌛️ Exᴘɪʀʏ Dᴀᴛᴇ : {expiry_str_in_ist}", disable_web_page_preview=True)
             await client.send_message(
                 chat_id=user_id,
-                text=f"👋 ʜᴇʏ {user.mention},\nᴛʜᴀɴᴋ ʏᴏᴜ ꜰᴏʀ ᴘᴜʀᴄʜᴀꜱɪɴɢ ᴘʀᴇᴍɪᴜᴍ.\nᴇɴᴊᴏʏ !! ✨🎉\n\n⏰ ᴘʀᴇᴍɪᴜᴍ ᴀᴄᴄᴇꜱꜱ : <code>{time}</code>\n⏳ ᴊᴏɪɴɪɴɢ ᴅᴀᴛᴇ : {current_time}\n\n⌛️ ᴇxᴘɪʀʏ ᴅᴀᴛᴇ : {expiry_str_in_ist}", disable_web_page_preview=True              
+                text=f"👋 Hᴇʏ {user.mention},\nTʜᴀɴᴋ Yᴏᴜ Fᴏʀ Pᴜʀᴄʜᴀꜱɪɴɢ Pʀᴇᴍɪᴜᴍ.\nEɴᴊᴏʏ !! ✨🎉\n\n⏰ Pʀᴇᴍɪᴜᴍ Aᴄᴄᴇꜱꜱ : <code>{time}</code>\n⏳ Jᴏɪɴɪɴɢ Dᴀᴛᴇ : {current_time}\n\n⌛️ Exᴘɪʀʏ Dᴀᴛᴇ : {expiry_str_in_ist}", disable_web_page_preview=True              
             )    
-            await client.send_message(PREMIUM_LOGS, text=f"#Added_Premium\n\n👤 ᴜꜱᴇʀ : {user.mention}\n⚡ ᴜꜱᴇʀ ɪᴅ : <code>{user_id}</code>\n⏰ ᴘʀᴇᴍɪᴜᴍ ᴀᴄᴄᴇꜱꜱ : <code>{time}</code>\n\n⏳ ᴊᴏɪɴɪɴɢ ᴅᴀᴛᴇ : {current_time}\n\n⌛️ ᴇxᴘɪʀʏ ᴅᴀᴛᴇ : {expiry_str_in_ist}", disable_web_page_preview=True)
+            await client.send_message(PREMIUM_LOGS, text=f"#Added_Premium\n\n👤 Uꜱᴇʀ : {user.mention}\n⚡ Uꜱᴇʀ Iᴅ : <code>{user_id}</code>\n⏰ Pʀᴇᴍɪᴜᴍ Aᴄᴄᴇꜱꜱ : <code>{time}</code>\n\n⏳ Jᴏɪɴɪɴɢ Dᴀᴛᴇ : {current_time}\n\n⌛️ Exᴘɪʀʏ Dᴀᴛᴇ : {expiry_str_in_ist}", disable_web_page_preview=True)
                     
         else:
             await message.reply_text("Invalid time format. Please use '1 day for days', '1 hour for hours', or '1 min for minutes', or '1 month for months' or '1 year for year'")
@@ -146,18 +145,18 @@ async def plan(client, message):
     btn = [[
             InlineKeyboardButton('• Rᴇғᴇʀ •', callback_data='reffff')
         ],[
-            InlineKeyboardButton('• ʙʀᴏɴᴢᴇ ', callback_data='broze'),
-            InlineKeyboardButton('• ꜱɪʟᴠᴇʀ ', callback_data='silver')
+            InlineKeyboardButton('• Bʀᴏɴᴢᴇ ', callback_data='broze'),
+            InlineKeyboardButton('• Sɪʟᴠᴇʀ ', callback_data='silver')
         ],[
-            InlineKeyboardButton('• ɢᴏʟᴅ ', callback_data='gold'),
-            InlineKeyboardButton('• ᴘʟᴀᴛɪɴᴜᴍ ', callback_data='platinum')
+            InlineKeyboardButton('• Gᴏʟᴅ ', callback_data='gold'),
+            InlineKeyboardButton('• Pʟᴀᴛɪɴᴜᴍ ', callback_data='platinum')
         ],[
-            InlineKeyboardButton('• ᴅɪᴀᴍᴏɴᴅ ', callback_data='diamond'),
-            InlineKeyboardButton('• ᴏᴛʜᴇʀ ', callback_data='other')
+            InlineKeyboardButton('• Dɪᴀᴍᴏɴᴅ ', callback_data='diamond'),
+            InlineKeyboardButton('• Oᴛʜᴇʀ ', callback_data='other')
         ],[
-            InlineKeyboardButton('• ꜰʀᴇᴇ ᴛʀɪᴀʟ ', callback_data='free')
+            InlineKeyboardButton('• Fʀᴇᴇ Tʀɪᴀʟ ', callback_data='free')
         ],[            
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
     ]]
-    await message.reply_photo(photo="https://envs.sh/Wdj.jpg", caption=script.PREMIUM_TEXT.format(message.from_user.mention), reply_markup=InlineKeyboardMarkup(btn))
+    await message.reply_photo(photo="https://graph.org/file/7d8b428734782477158d4.jpg", caption=script.PREMIUM_TEXT.format(message.from_user.mention), reply_markup=InlineKeyboardMarkup(btn))
     
