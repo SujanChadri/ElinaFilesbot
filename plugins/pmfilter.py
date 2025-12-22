@@ -1833,9 +1833,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         btn = [[
             InlineKeyboardButton('ʀᴇғᴇʀ ᴀɴᴅ ɢᴇᴛ ᴘʀᴇᴍɪᴜᴍ', callback_data='reffff') 
         ],[
-            InlineKeyboardButton(' ʙʀᴏɴᴢᴇ ', callback_data='broze'),
-            InlineKeyboardButton('ꜱɪʟᴠᴇʀ ', callback_data='silver')
-        ],[
             InlineKeyboardButton('ɢᴏʟᴅ ', callback_data='gold'),
             InlineKeyboardButton('ᴘʟᴀᴛɪɴᴜᴍ ', callback_data='platinum')
         ],[
@@ -1858,9 +1855,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "premium_info":
         buttons = [[
             InlineKeyboardButton('ʀᴇғᴇʀ ᴀɴᴅ ɢᴇᴛ ᴘʀᴇᴍɪᴜᴍ', callback_data='reffff'),
-        ],[
-            InlineKeyboardButton('ʙʀᴏɴᴢᴇ ', callback_data='broze'),
-            InlineKeyboardButton('ꜱɪʟᴠᴇʀ ', callback_data='silver')
         ],[
             InlineKeyboardButton('ɢᴏʟᴅ ', callback_data='gold'),
             InlineKeyboardButton('ᴘʟᴀᴛɪɴᴜᴍ ', callback_data='platinum')
