@@ -1894,50 +1894,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
         )
         
-    elif query.data == "broze":
-        buttons = [[
-            InlineKeyboardButton('🔐 ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ', callback_data='purchase')
-        ],[
-            InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='free'),
-            InlineKeyboardButton('2 / 7', callback_data='pagesn1'),
-            InlineKeyboardButton('ɴᴇxᴛ ⋟', callback_data='silver')
-        ],[
-            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='premium_info')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await client.edit_message_media(
-            query.message.chat.id, 
-            query.message.id, 
-            InputMediaPhoto("https://graph.org/file/1c235400abee9407456b8-7fe9241ad31fb0d4e5.jpg")
-        )
-        await query.message.edit_text(
-            text=script.BRONZE_TXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
-
-    elif query.data == "silver":
-        buttons = [[
-            InlineKeyboardButton('🔐 ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ', callback_data='purchase')
-        ],[
-            InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='broze'),
-            InlineKeyboardButton('3 / 7', callback_data='pagesn1'),
-            InlineKeyboardButton('ɴᴇxᴛ ⋟', callback_data='gold')
-        ],[
-            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='premium_info')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await client.edit_message_media(
-            query.message.chat.id, 
-            query.message.id, 
-            InputMediaPhoto("https://graph.org/file/1c235400abee9407456b8-7fe9241ad31fb0d4e5.jpg")
-        )
-        await query.message.edit_text(
-            text=script.SILVER_TXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
-#Deendayal403
     elif query.data == "gold":
         buttons = [[
             InlineKeyboardButton('🔐 ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ', callback_data='purchase')
