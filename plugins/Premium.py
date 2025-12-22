@@ -56,26 +56,35 @@ async def get_premium(client, message):
     if len(message.command) == 2:
         user_id = int(message.command[1])
         user = await client.get_users(user_id)
-        data = await db.get_user(user_id)  # Convert the user_id to integer
+        data = await db.get_user(user_id)
+
         if data and data.get("expiry_time"):
-            #expiry_time = datetime.datetime.now() + datetime.timedelta(seconds=data)
-            expiry = data.get("expiry_time") 
+            expiry = data.get("expiry_time")
             expiry_ist = expiry.astimezone(pytz.timezone("Asia/Kolkata"))
-            expiry_str_in_ist = expiry.astimezone(pytz.timezone("Asia/Kolkata")).strftime("%d-%m-%Y\n⏱️ ᴇxᴘɪʀʏ ᴛɪᴍᴇ : %I:%M:%S %p")            
-            # Calculate time difference
+            expiry_str_in_ist = expiry_ist.strftime(
+                "%d-%m-%Y\n⏱️ ᴇxᴘɪʀʏ ᴛɪᴍᴇ : %I:%M:%S %p"
+            )
+
             current_time = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
             time_left = expiry_ist - current_time
-            
-            # Calculate days, hours, and minutes
+
             days = time_left.days
             hours, remainder = divmod(time_left.seconds, 3600)
             minutes, seconds = divmod(remainder, 60)
-            
-            # Format time left as a string
+
             time_left_str = f"{days} Dᴀʏꜱ, {hours} Hᴏᴜʀꜱ, {minutes} Mɪɴᴜᴛᴇꜱ"
-        await message.reply_text(f"⚜️ Pʀᴇᴍɪᴜᴍ Uꜱᴇʀ Dᴀᴛᴀ :\n\n👤 Uꜱᴇʀ : {user}\n⚡ Uꜱᴇʀ Iᴅ : <code>{user_id}</code>\n⏰ Tɪᴍᴇ Lᴇꜰᴛ : {time_left_str}\n⌛️ Exᴘɪʀʏ Dᴀᴛᴇ : {expiry_str_in_ist}")
+
+            await message.reply_text(
+                f"⚜️ Pʀᴇᴍɪᴜᴍ Uꜱᴇʀ Dᴀᴛᴀ :\n\n"
+                f"👤 Uꜱᴇʀ : {user.mention}\n"
+                f"⚡ Uꜱᴇʀ Iᴅ : <code>{user_id}</code>\n"
+                f"⏰ Tɪᴍᴇ Lᴇꜰᴛ : {time_left_str}\n"
+                f"⌛️ Exᴘɪʀʏ Dᴀᴛᴇ : {expiry_str_in_ist}"
+            )
         else:
-            await message.reply_text("Nᴏ Aɴʏ Pʀᴇᴍɪᴜᴍ Dᴀᴛᴀ Fᴏᴜɴᴅ Iɴ Dᴀᴛᴀʙᴀꜱᴇ !")
+            await message.reply_text(
+                "Nᴏ Aɴʏ Pʀᴇᴍɪᴜᴍ Dᴀᴛᴀ Fᴏᴜɴᴅ Iɴ Dᴀᴛᴀʙᴀꜱᴇ !"
+            )
     else:
         await message.reply_text("ᴜꜱᴀɢᴇ : /get_premium user_id")
 
