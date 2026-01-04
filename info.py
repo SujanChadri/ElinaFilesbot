@@ -66,8 +66,8 @@ APPROVED = environ.get("APPROVED_WELCOME", "on").lower()
 # ============================
 DATABASE_URI = environ.get('DATABASE_URI', 'mongodb+srv://jatojibu1:jatojibu1@cluster0.juytk2v.mongodb.net/?appName=Cluster0')
 DATABASE_URI2 = environ.get('DATABASE_URI2', 'mongodb+srv://peacock22871:peacock22871@cluster0.qn2xtpn.mongodb.net/?appName=Cluster0')
-DATABASE_NAME = environ.get('DATABASE_NAME', "Sujan_Ch")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'TelegramFiles')
+DATABASE_NAME = environ.get('DATABASE_NAME', "Sujan_BotZ")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'TGFiles')
 
 # ============================
 # Movie Notification & Update Settings
