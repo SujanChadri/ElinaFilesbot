@@ -41,7 +41,7 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001952869963').split()]  # Channel id for auto indexing (make sure bot is admin)
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001813638350'))  # Log channel id (make sure bot is admin)
 BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-100181363850'))  # Bin channel id (make sure bot is admin)
-MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-1002148292464'))  # Notification of those who verify will be sent to your channel
+MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-100181363850'))  # Notification of those who verify will be sent to your channel
 PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1001826734158'))  # Premium logs channel id
 auth_channel = environ.get('AUTH_CHANNEL', '-1001861445521')  # Channel/Group ID for force sub (make sure bot is admin)
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001767829947').split()]
@@ -65,14 +65,14 @@ APPROVED = environ.get("APPROVED_WELCOME", "on").lower()
 # MongoDB Configuration
 # ============================
 DATABASE_URI = environ.get('DATABASE_URI', 'mongodb+srv://jatojibu1:jatojibu1@cluster0.juytk2v.mongodb.net/?appName=Cluster0')
-DATABASE_URI2 = environ.get('DATABASE_URI2', 'mongodb+srv://bojaya7287:bojaya7287@cluster0.flkks51.mongodb.net/?appName=Cluster0')
+DATABASE_URI2 = environ.get('DATABASE_URI2', '')
 DATABASE_NAME = environ.get('DATABASE_NAME', "Sujan_Ch")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'TelegramFiles')
 
 # ============================
 # Movie Notification & Update Settings
 # ============================
-MOVIE_UPDATE_NOTIFICATION = bool(environ.get('MOVIE_UPDATE_NOTIFICATION', False))  # Notification On (True) / Off (False)
+MOVIE_UPDATE_NOTIFICATION = bool(environ.get('MOVIE_UPDATE_NOTIFICATION', True))  # Notification On (True) / Off (False)
 IMAGE_FETCH = bool(environ.get('IMAGE_FETCH', True))  # On (True) / Off (False)
 CAPTION_LANGUAGES = ["Bhojpuri", "Hindi", "Bengali", "Tamil", "English", "Bangla", "Telugu", "Malayalam", "Kannada", "Marathi", "Punjabi", "Bengoli", "Gujrati", "Korean", "Gujarati", "Spanish", "French", "German", "Chinese", "Arabic", "Portuguese", "Russian", "Japanese", "Odia", "Assamese", "Urdu"]
 
@@ -99,7 +99,7 @@ IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+DpKJW8fkcrBkNzQ1')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/Sujan_BotZ')
 OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/Sujan_Chh')
-MOVIE_UPDATE_CHANNEL_LNK = environ.get('MOVIE_UPDATE_CHANNEL_LNK', '')
+MOVIE_UPDATE_CHANNEL_LNK = environ.get('MOVIE_UPDATE_CHANNEL_LNK', 'https://t.me/+LaxmIG_lxAc2M2Vl')
 OWNERID = int(os.environ.get('OWNERID', '5123039648'))  # Replace with the actual admin ID
 
 # ============================
